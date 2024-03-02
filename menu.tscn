@@ -33,9 +33,10 @@ label_settings = SubResource("LabelSettings_2vwoq")
 custom_minimum_size = Vector2(72, 0)
 layout_mode = 0
 offset_left = 849.0
-offset_top = 683.3
+offset_top = 683.24
 offset_right = 1394.0
 offset_bottom = 755.3
+offset_bottom = 755.24
 theme_override_font_sizes/font_size = 46
 text = "no"
 
