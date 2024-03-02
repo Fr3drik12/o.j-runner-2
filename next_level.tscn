@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxoy6gynsy8sk"]
+
+[ext_resource type="Texture2D" uid="uid://di13fx5dlmlov" path="res://naples-yellow-painted-swatch.jpg" id="1_mhxw5"]
+[ext_resource type="Script" path="res://Area2D.gd" id="2_mhh5w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8oa2"]
+size = Vector2(1273.17, 1244.44)
+
+[node name="nextLevel" type="Sprite2D"]
+position = Vector2(1876, 577)
+scale = Vector2(0.0325, 0.03375)
+texture = ExtResource("1_mhxw5")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_mhh5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.00390625, 0.00195313)
+shape = SubResource("RectangleShape2D_p8oa2")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
