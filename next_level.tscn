@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Area2D.gd" id="2_mhh5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8oa2"]
-size = Vector2(1273.17, 1244.44)
+size = Vector2(1325.48, 1244.44)
 
 [node name="nextLevel" type="Sprite2D"]
 position = Vector2(1876, 577)

@@ -15,6 +15,13 @@ run/main_scene="res://level_1.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Level="*res://level.gd"
+Cur="*res://cube thingy.gd"
+Level1="*res://level_1.gd"
+Node2d="*res://node_2d.tscn"
+
 [display]
 
 window/size/viewport_width=1920

@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnj4talefprkt"]
+
+[ext_resource type="PackedScene" uid="uid://bhtwh5101gywy" path="res://cube thingy.tscn" id="1_bybeo"]
+[ext_resource type="PackedScene" uid="uid://bsplvya5qc42d" path="res://map.tscn" id="2_d1ep4"]
+[ext_resource type="PackedScene" uid="uid://b8afkjs4mdkd4" path="res://lava.tscn" id="3_ggdcc"]
+[ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="4_gf675"]
+[ext_resource type="PackedScene" uid="uid://bxoy6gynsy8sk" path="res://next_level.tscn" id="5_cqv07"]
+[ext_resource type="PackedScene" uid="uid://cxu4fhm2weaib" path="res://menu.tscn" id="6_b5161"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_pa5bc"]
+
+[node name="level_1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_bybeo")]
+position = Vector2(-414, -247)
+scale = Vector2(0.996008, 1.00661)
+
+[node name="map" parent="." instance=ExtResource("2_d1ep4")]
+visibility_layer = 2
+
+[node name="lava" parent="." instance=ExtResource("3_ggdcc")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamWAV_pa5bc")
+volume_db = 10.016
+script = ExtResource("4_gf675")
+
+[node name="nextLevel" parent="." instance=ExtResource("5_cqv07")]
+position = Vector2(1861.75, 563.125)
+scale = Vector2(0.05625, 0.056875)
+
+[node name="menu" parent="." instance=ExtResource("6_b5161")]
+
+[editable path="lava"]
+[editable path="nextLevel"]

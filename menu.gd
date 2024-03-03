@@ -1,9 +1,16 @@
 extends Control
+@onready var menu = $"."
 
-
-func _on_no_pressed():
-	get_tree().change_scene_to_file("res://level_1.tscn")
-
+func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		menu.visible = true
+		
+	else:
+		hide()
 
 func _on_yes_pressed():
 	get_tree().quit()
+	
+func _ready():
+	if Input.is_action_pressed("ui_cancel"):
+		self.visible = true
