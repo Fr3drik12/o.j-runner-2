@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://7a1xdn52sec3"]
+[gd_scene load_steps=5 format=3 uid="uid://7a1xdn52sec3"]
 
 [ext_resource type="PackedScene" uid="uid://bsplvya5qc42d" path="res://map.tscn" id="1_4behq"]
 [ext_resource type="PackedScene" uid="uid://b8afkjs4mdkd4" path="res://lava.tscn" id="2_2o2um"]
 [ext_resource type="PackedScene" uid="uid://bhtwh5101gywy" path="res://cube thingy.tscn" id="3_iboa2"]
 [ext_resource type="PackedScene" uid="uid://bxoy6gynsy8sk" path="res://next_level.tscn" id="4_h37vx"]
-[ext_resource type="PackedScene" uid="uid://cxu4fhm2weaib" path="res://menu.tscn" id="5_4xs8d"]
 
 [node name="level_4" type="Node2D"]
 
@@ -26,9 +25,6 @@ position = Vector2(574.293, 600.034)
 [node name="nextLevel" parent="." instance=ExtResource("4_h37vx")]
 position = Vector2(1785, 51.9999)
 scale = Vector2(0.05625, 0.056875)
-
-[node name="menu" parent="." instance=ExtResource("5_4xs8d")]
-visible = false
 
 [connection signal="area_entered" from="lava/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 

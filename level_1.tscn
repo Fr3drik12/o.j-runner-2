@@ -1,17 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnj4talefprkt"]
+[gd_scene load_steps=7 format=3 uid="uid://bnj4talefprkt"]
 
 [ext_resource type="PackedScene" uid="uid://bhtwh5101gywy" path="res://cube thingy.tscn" id="1_bybeo"]
-[ext_resource type="Script" path="res://level_1.gd" id="1_ugmmg"]
 [ext_resource type="PackedScene" uid="uid://bsplvya5qc42d" path="res://map.tscn" id="2_d1ep4"]
 [ext_resource type="PackedScene" uid="uid://b8afkjs4mdkd4" path="res://lava.tscn" id="3_ggdcc"]
 [ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="4_gf675"]
 [ext_resource type="PackedScene" uid="uid://bxoy6gynsy8sk" path="res://next_level.tscn" id="5_cqv07"]
-[ext_resource type="PackedScene" uid="uid://cxu4fhm2weaib" path="res://menu.tscn" id="6_b5161"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_pa5bc"]
 
 [node name="level_1" type="Node2D"]
-script = ExtResource("1_ugmmg")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_bybeo")]
 position = Vector2(-414, -247)
@@ -30,11 +27,6 @@ script = ExtResource("4_gf675")
 [node name="nextLevel" parent="." instance=ExtResource("5_cqv07")]
 position = Vector2(1861.75, 563.125)
 scale = Vector2(0.05625, 0.056875)
-
-[node name="menu" parent="." instance=ExtResource("6_b5161")]
-visible = false
-
-[connection signal="area_entered" from="lava/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 
 [editable path="lava"]
 [editable path="nextLevel"]

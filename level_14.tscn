@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://degpnuoryfdyb"]
+[gd_scene load_steps=5 format=3 uid="uid://degpnuoryfdyb"]
 
 [ext_resource type="PackedScene" uid="uid://bhtwh5101gywy" path="res://cube thingy.tscn" id="1_52tel"]
 [ext_resource type="PackedScene" uid="uid://bsplvya5qc42d" path="res://map.tscn" id="2_75x6p"]
 [ext_resource type="PackedScene" uid="uid://bxoy6gynsy8sk" path="res://next_level.tscn" id="3_1vrd5"]
 [ext_resource type="PackedScene" uid="uid://b8afkjs4mdkd4" path="res://lava.tscn" id="4_sn22e"]
-[ext_resource type="PackedScene" uid="uid://cxu4fhm2weaib" path="res://menu.tscn" id="5_ie0so"]
 
 [node name="level_14" type="Node2D"]
 
@@ -21,9 +20,6 @@ position = Vector2(1855, 793)
 scale = Vector2(0.05625, 0.056875)
 
 [node name="lava" parent="." instance=ExtResource("4_sn22e")]
-
-[node name="menu" parent="." instance=ExtResource("5_ie0so")]
-visible = false
 
 [editable path="nextLevel"]
 [editable path="lava"]

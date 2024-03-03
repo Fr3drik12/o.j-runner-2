@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6a1mjwh2mehs"]
+[gd_scene load_steps=7 format=3 uid="uid://c6a1mjwh2mehs"]
 
 [ext_resource type="Texture2D" uid="uid://mqtdvys0uwhv" path="res://file.jpg" id="1_onuou"]
 [ext_resource type="PackedScene" uid="uid://bhtwh5101gywy" path="res://cube thingy.tscn" id="2_su5gb"]
 [ext_resource type="PackedScene" uid="uid://b8afkjs4mdkd4" path="res://lava.tscn" id="3_3hphv"]
 [ext_resource type="PackedScene" uid="uid://bxoy6gynsy8sk" path="res://next_level.tscn" id="4_vm25g"]
-[ext_resource type="PackedScene" uid="uid://cxu4fhm2weaib" path="res://menu.tscn" id="5_iguve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cvsm8"]
 texture = ExtResource("1_onuou")
@@ -17434,9 +17433,6 @@ scale = Vector2(0.05625, 0.056875)
 
 [node name="CollisionShape2D" parent="nextLevel/Area2D" index="0"]
 position = Vector2(4.44401, -2.19799)
-
-[node name="menu" parent="." instance=ExtResource("5_iguve")]
-visible = false
 
 [connection signal="area_entered" from="lava/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 

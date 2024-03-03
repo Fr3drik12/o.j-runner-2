@@ -29,13 +29,24 @@ text = "exit?
 "
 label_settings = SubResource("LabelSettings_2vwoq")
 
+[node name="no" type="Button" parent="."]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 0
+offset_left = 849.0
+offset_top = 683.24
+offset_right = 1394.0
+offset_bottom = 755.24
+theme_override_font_sizes/font_size = 46
+text = "no"
+
 [node name="yes" type="Button" parent="."]
 layout_mode = 0
 offset_left = 852.0
-offset_top = 630.36
+offset_top = 489.0
 offset_right = 1394.0
-offset_bottom = 702.361
+offset_bottom = 561.0
 theme_override_font_sizes/font_size = 46
 text = "yes"
 
+[connection signal="pressed" from="no" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
